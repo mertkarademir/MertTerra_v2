@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Folders</h2>
+            <div class="folder-actions">
+                <button id="newFolderBtn" class="btn">New Folder</button>
+                <button id="newSubfolderBtn" class="btn">New Subfolder</button>
+            </div>
+            <div id="foldersList" class="folders-list"></div>
+        </div>
+        <div class="main-content">
+            <div class="upload-section">
+                <input type="file" id="photoUpload" accept="image/*" multiple>
+                <button id="uploadBtn" class="btn">Upload Photos</button>
+            </div>
+            <div id="currentFolderPath" class="folder-path"></div>
+            <div id="photosGrid" class="photos-grid"></div>
+        </div>
+    </div>
+
+    <!-- Folder Modal -->
+    <div id="folderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Folder</h2>
+            <input type="text" id="folderName" placeholder="Folder Name">
+            <button id="createFolderBtn" class="btn">Create</button>
+        </div>
+    </div>
+
+    <!-- Description Modal -->
+    <div id="descriptionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Description</h2>
+            <textarea id="photoDescription" placeholder="Enter photo description"></textarea>
+            <button id="saveDescriptionBtn" class="btn">Save</button>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirm Delete</h2>
+            <p>Are you sure you want to delete this item?</p>
+            <div class="modal-buttons">
+                <button id="confirmDeleteBtn" class="btn btn-danger">Delete</button>
+                <button id="cancelDeleteBtn" class="btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
